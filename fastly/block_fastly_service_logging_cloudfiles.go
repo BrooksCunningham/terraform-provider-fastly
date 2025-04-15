@@ -35,7 +35,6 @@ func (h *CloudfilesServiceAttributeHandler) GetSchema() *schema.Schema {
 		"access_key": {
 			Type:        schema.TypeString,
 			Required:    true,
-			Sensitive:   true,
 			Description: "Your Cloud File account access key",
 		},
 		"bucket_name": {

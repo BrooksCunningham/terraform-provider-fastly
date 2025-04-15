@@ -53,7 +53,6 @@ func (h *GooglePubSubServiceAttributeHandler) GetSchema() *schema.Schema {
 			Required:    true,
 			Description: "Your Google Cloud Platform account secret key. The `private_key` field in your service account authentication JSON. You may optionally provide this secret via an environment variable, `FASTLY_GOOGLE_PUBSUB_SECRET_KEY`.",
 			DefaultFunc: schema.EnvDefaultFunc("FASTLY_GOOGLE_PUBSUB_SECRET_KEY", ""),
-			Sensitive:   true,
 		},
 		"topic": {
 			Type:        schema.TypeString,

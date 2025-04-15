@@ -101,7 +101,6 @@ func (h *HTTPSLoggingServiceAttributeHandler) GetSchema() *schema.Schema {
 			Type:             schema.TypeString,
 			Optional:         true,
 			Description:      "The client private key used to make authenticated requests. Must be in PEM format",
-			Sensitive:        true,
 			ValidateDiagFunc: validateStringTrimmed,
 		},
 		"tls_hostname": {

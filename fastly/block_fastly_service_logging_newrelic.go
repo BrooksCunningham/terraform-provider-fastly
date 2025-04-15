@@ -46,7 +46,6 @@ func (h *NewRelicServiceAttributeHandler) GetSchema() *schema.Schema {
 		"token": {
 			Type:        schema.TypeString,
 			Required:    true,
-			Sensitive:   true,
 			Description: "The Insert API key from the Account page of your New Relic account",
 		},
 	}

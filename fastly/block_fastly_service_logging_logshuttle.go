@@ -41,7 +41,6 @@ func (h *LogshuttleServiceAttributeHandler) GetSchema() *schema.Schema {
 		"token": {
 			Type:        schema.TypeString,
 			Required:    true,
-			Sensitive:   true,
 			Description: "The data authentication token associated with this endpoint",
 		},
 		"url": {
