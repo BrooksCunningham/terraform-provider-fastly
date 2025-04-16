@@ -35,6 +35,7 @@ func (h *DigitalOceanServiceAttributeHandler) GetSchema() *schema.Schema {
 		"access_key": {
 			Type:        schema.TypeString,
 			Required:    true,
+			Sensitive:   true,
 			Description: "Your DigitalOcean Spaces account access key",
 		},
 		"bucket_name": {
@@ -95,6 +96,7 @@ func (h *DigitalOceanServiceAttributeHandler) GetSchema() *schema.Schema {
 		"secret_key": {
 			Type:        schema.TypeString,
 			Required:    true,
+			Sensitive:   true,
 			Description: "Your DigitalOcean Spaces account secret key",
 		},
 		"timestamp_format": {

@@ -54,6 +54,7 @@ func (h *SplunkServiceAttributeHandler) GetSchema() *schema.Schema {
 			Optional:    true,
 			DefaultFunc: schema.EnvDefaultFunc("FASTLY_SPLUNK_CLIENT_KEY", ""),
 			Description: "The client private key used to make authenticated requests. Must be in PEM format.",
+			Sensitive:   true,
 		},
 		"tls_hostname": {
 			Type:        schema.TypeString,
@@ -65,6 +66,7 @@ func (h *SplunkServiceAttributeHandler) GetSchema() *schema.Schema {
 			Required:    true,
 			DefaultFunc: schema.EnvDefaultFunc("FASTLY_SPLUNK_TOKEN", nil),
 			Description: "The Splunk token to be used for authentication",
+			Sensitive:   true,
 		},
 		"url": {
 			Type:        schema.TypeString,

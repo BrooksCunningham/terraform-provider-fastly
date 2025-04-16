@@ -69,6 +69,7 @@ func (h *SFTPServiceAttributeHandler) GetSchema() *schema.Schema {
 			Type:        schema.TypeString,
 			Optional:    true,
 			Description: "The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred",
+			Sensitive:   true,
 		},
 		"path": {
 			Type:        schema.TypeString,
@@ -97,6 +98,7 @@ func (h *SFTPServiceAttributeHandler) GetSchema() *schema.Schema {
 			Type:             schema.TypeString,
 			Optional:         true,
 			Description:      "The SSH private key for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred",
+			Sensitive:        true,
 			ValidateDiagFunc: validateStringTrimmed,
 		},
 		"ssh_known_hosts": {

@@ -35,6 +35,7 @@ func resourceFastlyTLSPrivateKey() *schema.Resource {
 				Required:    true,
 				ForceNew:    true,
 				Description: "Private key in PEM format.",
+				Sensitive:   true,
 			},
 			"key_type": {
 				Type:        schema.TypeString,

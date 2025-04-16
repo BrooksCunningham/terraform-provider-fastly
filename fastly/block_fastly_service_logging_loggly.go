@@ -42,6 +42,7 @@ func (h *LogglyServiceAttributeHandler) GetSchema() *schema.Schema {
 		"token": {
 			Type:        schema.TypeString,
 			Required:    true,
+			Sensitive:   true,
 			Description: "The token to use for authentication (https://www.loggly.com/docs/customer-token-authentication-token/).",
 		},
 	}

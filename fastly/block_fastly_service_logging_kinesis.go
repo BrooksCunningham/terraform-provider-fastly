@@ -35,6 +35,7 @@ func (h *KinesisServiceAttributeHandler) GetSchema() *schema.Schema {
 		"access_key": {
 			Type:        schema.TypeString,
 			Optional:    true,
+			Sensitive:   true,
 			Description: "The AWS access key to be used to write to the stream",
 		},
 		"iam_role": {
@@ -57,6 +58,7 @@ func (h *KinesisServiceAttributeHandler) GetSchema() *schema.Schema {
 		"secret_key": {
 			Type:        schema.TypeString,
 			Optional:    true,
+			Sensitive:   true,
 			Description: "The AWS secret access key to authenticate with",
 		},
 		"topic": {
