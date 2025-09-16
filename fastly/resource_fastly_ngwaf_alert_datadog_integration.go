@@ -37,9 +37,10 @@ func resourceFastlyNGWAFAlertDatadogIntegration() *schema.Resource {
 				Sensitive:    !DisplaySensitiveFields,
 			},
 			"site": {
-				Description:  "The Datadog site.",
-				Required:     true,
+				Description:  "The Datadog site. Default `us1`",
+				Optional:     true,
 				Type:         schema.TypeString,
+				Default:      "us1",
 				ValidateFunc: validation.StringLenBetween(3, 3),
 			},
 			"workspace_id": {
